@@ -17,7 +17,7 @@ export function Experience() {
           aria-hidden="true"
         />
         {experiences.map((exp, i) => (
-          <li key={exp.id} className="md:pl-10">
+          <li key={exp.id} className="relative md:pl-10">
             <span
               className="absolute left-0 hidden h-[15px] w-[15px] translate-y-6 place-items-center rounded-full border border-hud/60 bg-background md:grid"
               aria-hidden="true"
