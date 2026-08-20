@@ -62,7 +62,7 @@ export function Hero() {
           >
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 rounded bg-gradient-to-r from-hud to-primary px-5 py-3 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-transform hover:-translate-y-0.5 glow-ring"
+              className="group inline-flex items-center gap-2 rounded bg-linear-to-r from-hud to-primary px-5 py-3 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-transform hover:-translate-y-0.5 glow-ring"
             >
               Explore My Work
               <ArrowDown size={14} className="transition-transform group-hover:translate-y-0.5" />

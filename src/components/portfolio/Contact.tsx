@@ -85,7 +85,7 @@ export function Contact() {
             <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-2 rounded bg-gradient-to-r from-hud to-primary px-5 py-3 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-transform hover:-translate-y-0.5 glow-ring"
+                className="inline-flex items-center gap-2 rounded bg-linear-to-r from-hud to-primary px-5 py-3 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-transform hover:-translate-y-0.5 glow-ring"
               >
                 <Mail size={14} /> Open a channel
               </a>

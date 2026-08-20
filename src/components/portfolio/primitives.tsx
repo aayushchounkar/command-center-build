@@ -46,7 +46,7 @@ export function SectionShell({
             <span className="text-hud-label opacity-70">
               {index} / {label}
             </span>
-            <span className="h-px flex-1 bg-gradient-to-r from-hud/40 to-transparent" />
+            <span className="h-px flex-1 bg-linear-to-r from-hud/40 to-transparent" />
           </div>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl">
             {title}
