@@ -1,24 +1,65 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { BootSequence } from "@/components/portfolio/BootSequence";
+import { Nav } from "@/components/portfolio/Nav";
+import { Hero } from "@/components/portfolio/Hero";
+import { About } from "@/components/portfolio/About";
+import { Experience } from "@/components/portfolio/Experience";
+import { Projects } from "@/components/portfolio/Projects";
+import { Skills } from "@/components/portfolio/Skills";
+import { Leadership } from "@/components/portfolio/Leadership";
+import { Impact } from "@/components/portfolio/Impact";
+import { Contact } from "@/components/portfolio/Contact";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const TITLE = "Aayush Chounkar — Product, Project Management & Technology";
+const DESC =
+  "Portfolio of Aayush Chounkar, a Computer Science Engineering student and Product Owner working across software testing, AI automation, product management and team leadership.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESC },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESC },
+      { property: "og:type", content: "profile" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Aayush Chounkar",
+          email: "mailto:aayushchounkar@gmail.com",
+          telephone: "+91 7678071710",
+          jobTitle: "Project Manager Intern & Product Owner",
+          address: { "@type": "PostalAddress", addressLocality: "Mumbai", addressCountry: "IN" },
+          alumniOf: { "@type": "CollegeOrUniversity", name: "ITM Skills University" },
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <BootSequence />
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Leadership />
+        <Impact />
+        <Contact />
+      </main>
+    </>
   );
 }
